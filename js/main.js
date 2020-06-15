@@ -11,6 +11,7 @@ function getMovies(searchText){
   // Make a request for a user with a given ID
   axios.get("https://api.themoviedb.org/3/search/movie?api_key=98325a9d3ed3ec225e41ccc4d360c817&language=en-US&query=" + searchText)
     .then(function (response) {
+      console.log(response)
       let movies = response.data.results;
       let output = '';
       $.each(movies, (index, movie) => {
